@@ -1,13 +1,12 @@
 package ru.netology.repository
 
-import android.os.Parcel
-import android.os.Parcelable
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import ru.netology.R
 import ru.netology.dbo.Post
 
-class PostRepositoryInMemoryImpl() : PostRepository {
+class PostRepositoryInMemoryImpl: PostRepository {
    private var posts: List<Post> = listOf(
        Post(
     id = 1,
@@ -58,9 +57,7 @@ class PostRepositoryInMemoryImpl() : PostRepository {
 
     private val data: MutableLiveData<List<Post>> = MutableLiveData(posts)
 
-    constructor(parcel: Parcel) : this() {
 
-    }
 
     override fun getAll(): LiveData<List<Post>> = data
 
