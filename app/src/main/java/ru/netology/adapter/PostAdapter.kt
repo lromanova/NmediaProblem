@@ -52,14 +52,10 @@ class PostViewHolder(
             )
 
             imgbtnFavorite.setOnClickListener {
-                //countFavorite = if (post.likedByMe) countFavorite - 1 else countFavorite + 1
-                //txtFavorite.text = convertCountToString(countFavorite)
                 onLikeListener(post)
             }
 
             binding.imgbtnShare.setOnClickListener{
-                //countShared += 1
-                //txtShare.text = convertCountToString(countShared)
                 onShareListener(post)
             }
         }
